@@ -1,0 +1,184 @@
+cd pdf/
+ 1386  ls
+ 1387  cd zlib-1.2.8/
+ 1388  ls
+ 1389  make
+ 1390  ./configure --prefix=build 
+ 1391  make
+ 1392  ls
+ 1393  make install
+ 1394  ls
+ 1395  ls build/
+ 1396  ls build/lib/
+ 1397  ls
+ 1398  cd build/
+ 1399  ls
+ 1400  ls share/
+ 1401  ls lib/
+ 1402  ls include/
+ 1403  cp include/* ../../
+ 1404  cp lib/libz.a ../../
+ 1405  cd ..
+ 1406  ls
+ 1407  cd libpng/
+ 1408  ls
+ 1409  ./configure 
+ 1410  vim configure 
+ 1411  ls
+ 1412  gcc -c png.c
+ 1413  cp scripts/pnglibconf.h.prebuilt pnglibconfi.h
+ 1414  ls
+ 1415  gcc -c png.c
+ 1416  gcc -c png.c -I./
+ 1417  mv pnglibconfi.h pnglibconf.h
+ 1418  gcc -c png.c -I./
+ 1419  ls
+ 1420  gcc example.c -o example ./png.o
+ 1421  gcc example.c -o example ./png.o -lm
+ 1422  ls
+ 1423  gcc -c *.c
+ 1424  gcc example.c -o example ./*.o
+ 1425  gcc example.c -o example ./*.o -lm
+ 1426  gcc example.c -o example ./*.o -lm -lz
+ 1427  ls
+ 1428  ar -cr libpng.a *.o
+ 1429  ls
+ 1430  cd ..
+ 1431  cp libpng/libpng.a ./
+ 1432  ls
+ 1433  cd libharu-libharu-d84867e/
+ 1434  ls
+ 1435  cd src/
+ 1436  ls
+ 1437  cd ..
+ 1438  ls
+ 1439  ls demo/
+ 1440  ls
+ 1441  cd src/
+ 1442  ls
+ 1443  gcc -c *.c
+ 1444  ls
+ 1445  gcc -c *.c -I../include
+ 1446  gcc -c *.c -I../include/
+ 1447  cd ../include/
+ 1448  ls
+ 1449  cp hpdf_config.h.cmake hpdf_config.h
+ 1450  cd ..
+ 1451  ls
+ 1452  cd src/
+ 1453  gcc -c *.c -I../include/
+ 1454  ls
+ 1455  cd ../include/
+ 1456  rm hpdf_config.h
+ 1457  cd ..
+ 1458  ls
+ 1459  cmake-gui
+ 1460  ls
+ 1461  cd build/
+ 1462  make
+ 1463  ls
+ 1464  cd demo/
+ 1465  ls
+ 1466  make
+ 1467  ls
+ 1468  cd ..
+ 1469  ls
+ 1470  cd ..
+ 1471  ls
+ 1472  tree
+ 1473  cd output/
+ 1474  ls
+ 1475  cd ..
+ 1476  cd build/
+ 1477  make install
+ 1478  ls
+ 1479  cd ..
+ 1480  ls
+ 1481  cd output/
+ 1482  ls
+ 1483  ls if/
+ 1484  ls if/freebasic/
+ 1485  ls if/c#/demo/
+ 1486  ls
+ 1487  ls lib/
+ 1488  ls
+ 1489  cd ..
+ 1490  ls
+ 1491  cd demo/
+ 1492  ls
+ 1493  gcc text_demo.c -o fuck
+ 1494  gcc text_demo.c -o fuck -I ../include/ ../output/libhpdf.a
+ 1495  gcc text_demo.c -o fuck -I../include/ ../output/lib/libhpdf.a
+ 1496  gcc text_demo.c -o fuck -I../include/ ../output/lib/libhpdfs.a
+ 1497  cd ..
+ 1498  find ./|grep hpdf_config.h
+ 1499  gcc text_demo.c -o fuck -I../build/include/ ../output/lib/libhpdfs.a
+ 1500  cd demo/
+ 1501  gcc text_demo.c -o fuck -I../build/include/ ../output/lib/libhpdfs.a
+ 1502  gcc text_demo.c -o fuck -I../build/include/ -I../include/ ../output/lib/libhpdfs.a
+ 1503  gcc text_demo.c -o fuck -I../build/include/ -I../include/ ../output/lib/libhpdfs.a -lm
+ 1504  gcc text_demo.c -o fuck -I../build/include/ -I../include/ ../output/lib/libhpdfs.a -lm -lz
+ 1505  cd ..
+ 1506  grep "print_grid" ./ -R
+ 1507  cd ..
+ 1508  cd libharu-libharu-d84867e/
+ 1509  gcc text_demo.c -o fuck -I../build/include/ -I../include/ ../output/lib/libhpdfs.a -lm -lz
+ 1510  cd demo/
+ 1511  gcc text_demo.c -o fuck -I../build/include/ -I../include/ ../output/lib/libhpdfs.a -lm -lz
+ 1512  cd ..
+ 1513  cmake-gui
+ 1514  cd build/
+ 1515  make
+ 1516  make install
+ 1517  ls
+ 1518  cd demo/
+ 1519  ls
+ 1520  cd ..
+ 1521  ls
+ 1522  cd output/
+ 1523  ls
+ 1524  cd demo/
+ 1525  ls
+ 1526  ./text_demo
+ 1527  cd ..
+ 1528  cd build/
+ 1529  ls
+ 1530  cd ..
+ 1531  cmake-gui
+ 1532  make clean
+ 1533  cd build/
+ 1534  cd ..
+ 1535  cmake-gui
+ 1536  cd build/
+ 1537  make clean
+ 1538  make
+ 1539  cd ..
+ 1540  cmake-gui
+ 1541  cd build/
+ 1542  make clean
+ 1543  make
+ 1544  cd ..
+ 1545  cmake-gui
+ 1546  ls
+ 1547  cd build/
+ 1548  ls
+ 1549  vim Makefile 
+ 1550  ls
+ 1551  cd ..
+ 1552  ls
+ 1553  cd demo/
+ 1554  ls
+ 1555  gcc text_demo.c -o fuck -I../build/include/ -I../include/ ../output/lib/libhpdfs.a -lm -lz
+ 1556  vim text_demo.c
+ 1557  gcc text_demo.c -o fuck -I../build/include/ -I../include/ ../output/lib/libhpdfs.a -lm -lz
+ 1558  ls
+ 1559  ./fuck 
+ 1560  ls
+ 1561  vim text_demo.c
+ 1562  fuck mmm
+ 1563  ./fuck mmm
+ 1564  ls
+ 1565  vim text_demo.c
+ 1566  gcc text_demo.c -o fuck -I../build/include/ -I../include/ ../output/lib/libhpdfs.a -lm -lz
+ 1567  ./fuck mmm
+
